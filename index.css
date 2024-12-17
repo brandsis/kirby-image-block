@@ -1,0 +1,30 @@
+.k-block-container.k-block-container-type-image {
+	padding: 0;
+}
+.k-block-type-image .k-block-figure {
+	padding: var(--spacing-3);
+	border-radius: var(--rounded);
+}
+.k-block-type-image .k-block-figure-container {
+	text-align: center;
+	line-height: 0;
+}
+.k-block-type-image .k-block-figure[data-empty="true"] {
+	padding: var(--spacing-3);
+}
+.k-block-type-image-auto {
+	max-width: 100%;
+	max-height: 30rem;
+	margin-inline: auto;
+}
+.k-block-type-image .k-background-dropdown {
+	display: none;
+	/*position: absolute;
+	inset-inline-end: var(--spacing-3);
+	bottom: var(--spacing-3);
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;*/
+}
+.k-block-type-image:hover .k-background-dropdown {
+	opacity: 1;
+}

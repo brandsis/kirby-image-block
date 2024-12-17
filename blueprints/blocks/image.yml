@@ -1,0 +1,123 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+	location:
+		label: field.blocks.image.location
+		type: radio
+		columns: 2
+		default: "kirby"
+		options:
+			kirby: Kirby
+			web: Web
+	image:
+		label: field.blocks.image.name
+		type: files
+		query: model.images
+		multiple: false
+		image:
+			back: white
+			cover: true
+		uploads:
+			template: blocks/image
+		when:
+			location: kirby
+	src:
+		label: field.blocks.image.url
+		type: url
+		when:
+			location: web
+	alt:
+		label: field.blocks.image.alt
+		type: text
+		icon: title
+		width: 3/4
+	title:
+		label: Use as title
+		type: toggle
+		width: 1/4
+		text:
+			- "no"
+			- "yes"
+	caption:
+		label: field.blocks.image.caption
+		type: writer
+		icon: text
+		inline: true
+	link:
+		label: field.blocks.image.link
+		type: link
+		width: 3/4
+	target:
+		label: Open in new window
+		type: toggle
+		width: 1/4
+		text:
+			- "no"
+			- "yes"
+	alignment:
+		type: toggles
+		width: 1/4
+		labels: false
+		grow: true
+		options:
+			- value: center
+				icon: text-center
+			- value: right
+				icon: text-right
+	ratio:
+		label: field.blocks.image.ratio
+		type: select
+		placeholder: Auto
+		width: 1/4
+		options:
+			1/1: "1:1"
+			16/9: "16:9"
+			10/8: "10:8"
+			21/9: "21:9"
+			7/5: "7:5"
+			4/3: "4:3"
+			5/3: "5:3"
+			3/2: "3:2"
+			3/1: "3:1"
+	crop:
+		label: field.blocks.image.crop
+		type: toggle
+		width: 1/4
+	lazy:
+		label: Lazy loading
+		type: toggle
+		width: 1/4
+		text:
+			- "no"
+			- "yes"
+	width:
+		type: text
+		width: 1/4
+	height:
+		type: text
+		width: 1/4
+	maxwidth:
+		label: Max. width
+		type: text
+		width: 1/4
+	maxheight:
+		label: Max. height
+		type: text
+		width: 1/4
+	topmargin:
+		label: Top margin
+		type: text
+		width: 1/4
+	bottommargin:
+		label: Bottom margin
+		type: text
+		width: 1/4
+	leftmargin:
+		label: Left margin
+		type: text
+		width: 1/4
+	rightmargint:
+		label: Right margin
+		type: text
+		width: 1/4

@@ -1,0 +1,22 @@
+{
+	"name": "brandsistency/image-block",
+	"description": "A custom image block for Kirby websites",
+	"type": "kirby-plugin",
+	"version": "1.0.0",
+	"license": "MIT",
+	"authors": [
+			{
+					"name": "Brandsistency",
+					"email": "support@brandsistency.com"
+			}
+	],
+	"keywords": [
+			"kirby3",
+			"kirby3-cms",
+			"kirby3-plugin",
+			"kirby4",
+			"kirby4-cms",
+			"kirby4-plugin",
+			"image"
+	]
+}
