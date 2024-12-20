@@ -1,19 +1,11 @@
-import Block from "./Default.vue";
-/** 
- * @displayName BlockTypeImage
- */
-export default {
-	extends: Block,
-	data() {
-		return {
-			back: this.onBack() ?? "white"
-		};
-	}
-};
-
 panel.plugin("brandsistency/image-block", {
 	blocks: {
-		image: {
+		myimage: {
+			data() {
+				return {
+					back: this.onBack() ?? "white"
+				};
+			},
 			computed: {
 				captionMarks() {
 					return this.field("caption", { marks: true }).marks;
@@ -35,13 +27,13 @@ panel.plugin("brandsistency/image-block", {
 				},
 				className() {
 					let value = this.content.alignment;
-					let className = value === 'center' ? 'txt-c' : value === 'right' ? 'txt-r' : ''; return className;
+					/*let className = value === 'center' ? 'txt-c' : value === 'right' ? 'txt-r' : ''; return className;*/
+					let className = value === 'center' ? 'k-block-type-myimage-auto txt-c' : value === 'right' ? 'k-block-type-myimage-auto txt-r' : 'k-block-type-myimage-auto'; return className;
 				},		
 			},
 			methods: {
 				onBack(value) {
-					const id = `kirby.imageBlock.${this.endpoints.field}.${this.id}`;
-		
+					const id = `kirby.imageBlock.${this.endpoints.field}.${this.id}`;		
 					if (value !== undefined) {
 						this.back = value;
 						sessionStorage.setItem(id, value);
@@ -55,7 +47,7 @@ panel.plugin("brandsistency/image-block", {
 					:back="back"
 					:caption="content.caption"
 					:caption-marks="captionMarks"
-					:empty-text="$t('field.blocks.image.placeholder') + ' …'"
+					:empty-text="$t('field.blocks.image.placeholder') + '…'"
 					:disabled="disabled"
 					:is-empty="!src"
 					empty-icon="image"
@@ -68,17 +60,15 @@ panel.plugin("brandsistency/image-block", {
 							:ratio="ratio"
 							:cover="crop"
 							:alt="content.alt"
-							:class="k-block-type-image-auto className"
+							:class="className"
 							:src="src"
 						/>
 						<img
 							v-else
 							:alt="content.alt"
-							:class="k-block-type-image-auto className"
+							:class="className"
 							:src="src"
 						/>
-
-						<k-block-background-dropdown :value="back" @input="onBack" />
 					</template>
 				</k-block-figure>
 			`

@@ -2,9 +2,9 @@
 
 Kirby::plugin('brandsistency/image-block', [
 	'blueprints' => [
-		'blocks/image' => __DIR__ . '/blueprints/blocks/image.yml'
+		'blocks/myimage' => __DIR__ . '/blueprints/blocks/myimage.yml'
 	],
 	'snippets' => [
-		'blocks/image' => __DIR__ . '/snippets/blocks/image.php'
+		'blocks/myimage' => __DIR__ . '/snippets/blocks/myimage.php'
 	]
 ]);
