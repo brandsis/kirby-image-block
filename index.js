@@ -1,6 +1,6 @@
-panel.plugin("brandsistency/image-block", {
+panel.plugin("brandsistency/custom-image-block", {
 	blocks: {
-		myimage: {
+		customimage: {
 			data() {
 				return {
 					back: this.onBack() ?? "white"
@@ -27,8 +27,7 @@ panel.plugin("brandsistency/image-block", {
 				},
 				className() {
 					let value = this.content.alignment;
-					/*let className = value === 'center' ? 'txt-c' : value === 'right' ? 'txt-r' : ''; return className;*/
-					let className = value === 'center' ? 'k-block-type-myimage-auto txt-c' : value === 'right' ? 'k-block-type-myimage-auto txt-r' : 'k-block-type-myimage-auto'; return className;
+					let className = value === 'center' ? 'k-block-type-customimage-auto img-c' : value === 'right' ? 'k-block-type-customimage-auto img-r' : 'k-block-type-customimage-auto'; return className;
 				},		
 			},
 			methods: {

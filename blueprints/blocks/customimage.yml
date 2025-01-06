@@ -1,6 +1,6 @@
-name: Image (new)
+name: Image
 icon: image
-preview: image
+preview: customimage
 fields:
 	location:
 		label: field.blocks.image.location

@@ -1,10 +1,10 @@
 <?php
 
-Kirby::plugin('brandsistency/image-block', [
+Kirby::plugin('brandsistency/custom-image-block', [
 	'blueprints' => [
-		'blocks/myimage' => __DIR__ . '/blueprints/blocks/myimage.yml'
+		'blocks/customimage' => __DIR__ . '/blueprints/blocks/customimage.yml'
 	],
 	'snippets' => [
-		'blocks/myimage' => __DIR__ . '/snippets/blocks/myimage.php'
+		'blocks/customimage' => __DIR__ . '/snippets/blocks/customimage.php'
 	]
 ]);
